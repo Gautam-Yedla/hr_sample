@@ -19,7 +19,16 @@ dotenv.config();
 connectToDatabase();
 
 const app = express();
-app.use(cors())
+app.use(cors({
+  origin: "https://hr-sample-frontend.onrender.com",
+  credentials: true
+}));
+
+app.get("/", (req, res) => {
+  res.send("Backend is running! 🚀");
+});
+
+
 app.use(express.json())
 app.use(express.static('public/uploads'))
 
