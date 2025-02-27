@@ -23,7 +23,7 @@
 //         }
 
 //         const response = await axios.get(
-//           `http://localhost:5000/api/leave/${id}`,
+//           `https://hr-sample-backend.onrender.com/api/leave/${id}`,
 //           {
 //             headers: {
 //               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -51,7 +51,7 @@
 
 //     try {
 //       const response = await axios.put(
-//         `http://localhost:5000/api/leave/${id}`,
+//         `https://hr-sample-backend.onrender.com/api/leave/${id}`,
 //         { status },
 //         {
 //           headers: {
@@ -84,7 +84,7 @@
 //               <img
 //                 src={
 //                   leave?.employeeId?.userId?.profileImage
-//                     ? `http://localhost:5000/${leave.employeeId.userId.profileImage}`
+//                     ? `https://hr-sample-backend.onrender.com/${leave.employeeId.userId.profileImage}`
 //                     : "/default-avatar.png"
 //                 }
 //                 alt="Profile"
@@ -193,7 +193,7 @@ const LeaveDetails = () => {
           return;
         }
 
-        const response = await axios.get(`http://localhost:5000/api/leave/${id}`, {
+        const response = await axios.get(`https://hr-sample-backend.onrender.com/api/leave/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -220,7 +220,7 @@ const LeaveDetails = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/leave/${id}`,
+        `https://hr-sample-backend.onrender.com/api/leave/${id}`,
         { status },
         {
           headers: {
@@ -255,7 +255,7 @@ const LeaveDetails = () => {
               <img
                 src={
                   leave?.employeeId?.userId?.profileImage
-                    ? `http://localhost:5000/${leave.employeeId.userId.profileImage}`
+                    ? `https://hr-sample-backend.onrender.com/${leave.employeeId.userId.profileImage}`
                     : "/default-avatar.png"
                 }
                 alt="Profile"
